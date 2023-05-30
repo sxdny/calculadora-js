@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 100;
+}
+
+nav {
+    background-color: black;
+    color: white;
+    padding: 0.5em;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+div.back {
+    height: calc(100vh - 45px); /* Esto pilla el 100% digamos de la pantalla (100vh) y le resta lo que ocupa la barra de navegación de arriba (45px)*/
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+div.calculadora {
+    display: grid;
+    grid-template-areas: " display display display display"
+                         " siete ocho nueve X "
+                         " cuatro cinco seis minus "
+                         " uno dos tres plus "
+                         " divide cero comma equal"
+                         "clear clear clear clear";
+    grid-template-columns: 3em 3em 3em 3em;
+    grid-auto-rows: 5em auto auto auto auto 3em;
+    grid-gap: 10px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 0.2em;
+}
+
+button {
+    font-size: 28px;
+}
+
+#btnclear {
+    grid-area: clear;
+}
+
+#textarea {
+    grid-area: display;
+    font-size: 48px;
+    padding: 10px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background-color: white;
+    color: red;
+}
+
+#btn1 {
+    grid-area: uno;
+}
+
+#btn2 {
+    grid-area: dos;
+}
+
+#btn3 {
+    grid-area: tres;
+}
+
+#btn4 {
+    grid-area: cuatro;
+}
+
+#btn5 {
+    grid-area: cinco;
+}
+
+#btn6 {
+    grid-area: seis;
+}
+
+#btn7 {
+    grid-area: siete;
+}
+
+#btn8 {
+    grid-area: ocho;
+}
+
+#btn9 {
+    grid-area: nueve;
+}
+
+#btn0 {
+    grid-area: cero;
+}
+
+#btnplus {
+    grid-area: plus;
+}
+
+#btnminus {
+    grid-area: minus;
+}
+
+#btntimes {
+    grid-area: X;
+}
+
+#btndivide {
+    grid-area: divide;
+}
+
+#btncomma {
+    grid-area: comma;
+}
+
+#btnequal {
+    grid-area: equal;
+}
